@@ -1,0 +1,26 @@
+{
+    "name": "landmark-detection",
+    "private": true,
+    "type": "module",
+    "workspaces": [
+        "packages/shared",
+        "apps/web",
+        "apps/server"
+    ],
+    "scripts": {
+        "start": "node apps/server/dist/index.js",
+        "dev": "npm run dev --workspaces --if-present",
+        "build": "npm run build --workspaces --if-present",
+        "lint": "npm run lint --workspaces --if-present",
+        "typecheck": "npm run typecheck --workspaces --if-present",
+        "test": "npm run test --workspaces --if-present",
+        "eval": "node --import tsx scripts/eval-harness.ts",
+        "audit:offline": "node scripts/audit-offline.js"
+    },
+    "engines": {
+        "node": ">=20"
+    },
+    "devDependencies": {
+        "vitest": "^4.1.12"
+    }
+}

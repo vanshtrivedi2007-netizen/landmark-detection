@@ -1,0 +1,27 @@
+:root {
+  --bg-canvas: #FAFAFA;
+  --bg-surface: #FFFFFF;
+  --bg-sunken: #F3F4F6;
+  --text-strong: #111827;
+  --text-body: #4B5563;
+  --text-muted: #6B7280;
+  --line: #E5E7EB;
+  --line-strong: #D1D5DB;
+  --accent: #1F3A5F;
+  --accent-hover: #16304F;
+  --accent-tint: #EAEFF5;
+  --focus-ring: #1F3A5F;
+  --enc-ok: #4F7A64;
+  --enc-caution: #B08A3E;
+  --enc-elevated: #A4543A;
+  --enc-neutral: #9CA3AF;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 16px; --sp-4: 24px;
+  --sp-5: 32px; --sp-6: 48px; --sp-7: 64px; --sp-8: 96px;
+  --fs-display: 3.052rem; --fs-h1: 2.441rem; --fs-h2: 1.953rem;
+  --fs-h3: 1.563rem; --fs-h4: 1.25rem; --fs-body: 1rem;
+  --fs-small: 0.8rem; --fs-caption: 0.72rem;
+  --content-max: 1120px;
+  --gutter: 24px;
+  --radius: 2px;
+}
+@media (max-width: 768px) { :root { --gutter: 16px; } }

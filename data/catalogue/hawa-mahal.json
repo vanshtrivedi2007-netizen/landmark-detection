@@ -1,0 +1,29 @@
+{
+  "id": "hawa-mahal",
+  "name": "Hawa Mahal",
+  "aliases": ["Palace of Winds"],
+  "location": { "city": "Jaipur", "state": "Rajasthan", "country": "India", "lat": 26.9239, "lon": 75.8267 },
+  "period": "1799",
+  "descriptor": "Five-storey pink sandstone facade with 953 small windows.",
+  "identifyingCues": [
+    { "id": "honeycomb-facade", "text": "honeycomb-like facade of small projecting windows (jharokhas)" },
+    { "id": "five-storey-pyramidal", "text": "pyramidal five-storey front that is wider at the base" },
+    { "id": "pink-sandstone", "text": "distinctive pink sandstone colour" }
+  ],
+  "confusableWith": ["red-fort"],
+  "terrain": { "type": "illustrative", "elevationRange": [430, 435], "footprintRadiusM": 50 },
+  "cards": {
+    "identity": [
+      { "text": "Built by Maharaja Sawai Pratap Singh to allow royal women to observe street life without being seen.", "evidenceIds": ["ev_haw_001"], "provenance": "curated" }
+    ],
+    "visiting": [
+      { "text": "Open daily 9:00 AM to 5:00 PM. Best viewed from the street in morning light.", "evidenceIds": ["ev_haw_004"], "provenance": "curated", "asOf": "2026-10-01" }
+    ],
+    "conditions": [
+      { "text": "Urban site on a busy Jaipur street. Desert climate: very hot and dry in summer, mild winters.", "evidenceIds": ["ev_haw_007"], "provenance": "curated" }
+    ],
+    "context": [
+      { "text": "Part of the City Palace complex. Jaipur's historic city centre is a UNESCO World Heritage Site since 2019.", "evidenceIds": ["ev_haw_002"], "provenance": "curated" }
+    ]
+  }
+}

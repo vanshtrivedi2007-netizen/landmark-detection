@@ -1,0 +1,31 @@
+{
+  "id": "taj-mahal",
+  "name": "Taj Mahal",
+  "aliases": ["Taj", "Crown of the Palace"],
+  "location": { "city": "Agra", "state": "Uttar Pradesh", "country": "India", "lat": 27.1751, "lon": 78.0421 },
+  "period": "1632–1653",
+  "descriptor": "Ivory-white marble mausoleum on the Yamuna riverbank.",
+  "identifyingCues": [
+    { "id": "central-dome", "text": "large central onion dome on a drum" },
+    { "id": "four-minarets", "text": "four slender minarets at plinth corners" },
+    { "id": "raised-plinth", "text": "white marble plinth with symmetrical iwan arches" },
+    { "id": "reflecting-pool", "text": "long rectangular reflecting pool on the central axis" }
+  ],
+  "confusableWith": ["humayuns-tomb"],
+  "terrain": { "type": "illustrative", "elevationRange": [160, 170], "footprintRadiusM": 300 },
+  "cards": {
+    "identity": [
+      { "text": "Mausoleum commissioned by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal.", "evidenceIds": ["ev_taj_001"], "provenance": "curated" },
+      { "text": "Located on the south bank of the Yamuna River in Agra, Uttar Pradesh.", "evidenceIds": ["ev_taj_001"], "provenance": "curated" }
+    ],
+    "visiting": [
+      { "text": "Open daily except Friday, sunrise to sunset. Entry via the west, east, or south gate.", "evidenceIds": ["ev_taj_004"], "provenance": "curated", "asOf": "2026-10-01" }
+    ],
+    "conditions": [
+      { "text": "Flat riverbank terrain. The site can experience extreme heat in May–June (above 45 °C) and monsoon flooding of the Yamuna in July–September.", "evidenceIds": ["ev_taj_007"], "provenance": "curated" }
+    ],
+    "context": [
+      { "text": "A UNESCO World Heritage Site since 1983, regarded as the finest example of Mughal architecture combining Persian, Islamic, and Indian styles.", "evidenceIds": ["ev_taj_002"], "provenance": "curated" }
+    ]
+  }
+}

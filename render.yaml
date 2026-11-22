@@ -1,0 +1,27 @@
+services:
+  # Option 1: Native Node Web Service (Fastify serves both Frontend SPA & Backend API)
+  - type: web
+    name: landmark-detection
+    env: node
+    plan: standard # 2 GB to 4 GB RAM recommended (or attach external Ollama URL)
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+      - key: OLLAMA_VISION_MODEL
+        value: gemma3:4b
+      - key: CONF_RECOGNIZED
+        value: "0.6"
+      - key: CONF_UNCERTAIN
+        value: "0.35"
+      - key: INFERENCE_TIMEOUT_MS
+        value: "120000"
+      - key: QUEUE_MAX
+        value: "3"

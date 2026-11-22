@@ -1,0 +1,52 @@
+{
+    "name": "@landmark/server",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "typecheck": "tsc --noEmit",
+        "lint": "echo ok",
+        "test": "vitest run"
+    },
+    "dependencies": {
+        "@fastify/cors": "^10.0.0",
+        "@fastify/multipart": "^9.0.0",
+        "@landmark/shared": "*",
+        "dotenv": "^16.4.0",
+        "fastify": "^5.1.0",
+        "sharp": "^0.35.5",
+        "zod": "^3.23.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.0",
+        "@types/sharp": "^0.31.1",
+        "tsx": "^4.19.0",
+        "typescript": "^5.5.0"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+{
+  "id": "india-gate",
+  "name": "India Gate",
+  "aliases": ["All India War Memorial"],
+  "location": { "city": "Delhi", "state": "Delhi", "country": "India", "lat": 28.6129, "lon": 77.2295 },
+  "period": "1921–1931",
+  "descriptor": "42-metre sandstone arch war memorial on Rajpath, New Delhi.",
+  "identifyingCues": [
+    { "id": "triumphal-arch", "text": "single large triumphal arch in sandstone" },
+    { "id": "inscribed-names", "text": "names of soldiers inscribed on the arch surfaces" },
+    { "id": "eternal-flame", "text": "Amar Jawan Jyoti eternal flame beneath the arch" }
+  ],
+  "confusableWith": [],
+  "terrain": { "type": "illustrative", "elevationRange": [213, 216], "footprintRadiusM": 150 },
+  "cards": {
+    "identity": [
+      { "text": "War memorial designed by Edwin Lutyens to commemorate soldiers of the British Indian Army who died in World War I and the Third Anglo-Afghan War.", "evidenceIds": ["ev_ind_001"], "provenance": "curated" }
+    ],
+    "visiting": [
+      { "text": "Open 24 hours. The surrounding Kartavya Path lawns are a popular evening gathering spot.", "evidenceIds": ["ev_ind_004"], "provenance": "curated", "asOf": "2026-10-01" }
+    ],
+    "conditions": [
+      { "text": "Flat urban parkland. Same Delhi climate: extreme heat in summer, monsoon July–September.", "evidenceIds": ["ev_ind_007"], "provenance": "curated" }
+    ],
+    "context": [
+      { "text": "Central to New Delhi's ceremonial axis. The Republic Day parade passes through here every 26 January.", "evidenceIds": ["ev_ind_002"], "provenance": "curated" }
+    ]
+  }
+}

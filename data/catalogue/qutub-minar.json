@@ -1,0 +1,29 @@
+{
+  "id": "qutub-minar",
+  "name": "Qutub Minar",
+  "aliases": ["Qutb Minar", "Qutab Minar"],
+  "location": { "city": "Delhi", "state": "Delhi", "country": "India", "lat": 28.5245, "lon": 77.1855 },
+  "period": "1192–1220",
+  "descriptor": "73-metre red sandstone and marble victory tower in the Qutb complex.",
+  "identifyingCues": [
+    { "id": "fluted-shaft", "text": "tapering fluted cylindrical shaft with projecting balconies" },
+    { "id": "five-storeys", "text": "five distinct storeys separated by ornate balconies" },
+    { "id": "carved-bands", "text": "alternating bands of red sandstone and buff sandstone with Quranic inscriptions" }
+  ],
+  "confusableWith": [],
+  "terrain": { "type": "illustrative", "elevationRange": [213, 225], "footprintRadiusM": 200 },
+  "cards": {
+    "identity": [
+      { "text": "Victory tower begun by Qutb ud-Din Aibak after the defeat of the last Hindu kingdom in Delhi.", "evidenceIds": ["ev_qut_001"], "provenance": "curated" }
+    ],
+    "visiting": [
+      { "text": "Open daily sunrise to sunset. Interior staircase closed to visitors since 1981.", "evidenceIds": ["ev_qut_004"], "provenance": "curated", "asOf": "2026-10-01" }
+    ],
+    "conditions": [
+      { "text": "Flat site within the Qutb complex. Hot summers and monsoon rains similar to Delhi.", "evidenceIds": ["ev_qut_007"], "provenance": "curated" }
+    ],
+    "context": [
+      { "text": "UNESCO World Heritage Site since 1993. The complex includes the Iron Pillar and the ruins of Quwwat-ul-Islam mosque.", "evidenceIds": ["ev_qut_002"], "provenance": "curated" }
+    ]
+  }
+}

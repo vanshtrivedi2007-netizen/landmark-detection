@@ -1,0 +1,195 @@
+{
+  "version": "1.0",
+  "description": "Evaluation dataset manifest for landmark recognition and out-of-catalogue abstention",
+  "items": [
+    {
+      "id": "eval_taj_001",
+      "landmarkId": "taj-mahal",
+      "split": "held-out",
+      "condition": "daylight_frontal",
+      "expectedCues": ["white marble central dome", "four corner minarets", "elevated square plinth", "central iwan"],
+      "confusableWith": ["humayuns-tomb", "bibi-ka-maqbara"]
+    },
+    {
+      "id": "eval_taj_002",
+      "landmarkId": "taj-mahal",
+      "split": "held-out",
+      "condition": "riverfront_dusk",
+      "expectedCues": ["white marble central dome", "four corner minarets"],
+      "confusableWith": ["bibi-ka-maqbara"]
+    },
+    {
+      "id": "eval_taj_003",
+      "landmarkId": "taj-mahal",
+      "split": "tuning",
+      "condition": "partial_gate_frame",
+      "expectedCues": ["white marble central dome", "central iwan"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_taj_004",
+      "landmarkId": "taj-mahal",
+      "split": "held-out",
+      "condition": "detail_chhatri",
+      "expectedCues": ["four corner minarets", "corner chhatris"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_red_001",
+      "landmarkId": "red-fort",
+      "split": "held-out",
+      "condition": "lahori_gate_frontal",
+      "expectedCues": ["red sandstone curtain walls", "flanking octagonal towers", "white marble chhatris"],
+      "confusableWith": ["agra-fort"]
+    },
+    {
+      "id": "eval_red_002",
+      "landmarkId": "red-fort",
+      "split": "tuning",
+      "condition": "crenellated_ramparts",
+      "expectedCues": ["red sandstone curtain walls", "flanking octagonal towers"],
+      "confusableWith": ["agra-fort"]
+    },
+    {
+      "id": "eval_red_003",
+      "landmarkId": "red-fort",
+      "split": "held-out",
+      "condition": "diwan_i_aam_hall",
+      "expectedCues": ["engrailed cusped arches", "red sandstone columns"],
+      "confusableWith": ["fatehpur-sikri"]
+    },
+    {
+      "id": "eval_qut_001",
+      "landmarkId": "qutub-minar",
+      "split": "held-out",
+      "condition": "fluted_tower_upward",
+      "expectedCues": ["fluted tapering minaret", "five distinct storeys with projecting balconies", "alternating angular and rounded flutings"],
+      "confusableWith": ["alai-minar"]
+    },
+    {
+      "id": "eval_qut_002",
+      "landmarkId": "qutub-minar",
+      "split": "tuning",
+      "condition": "balcony_corbel_detail",
+      "expectedCues": ["five distinct storeys with projecting balconies", "red and buff sandstone casing"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_qut_003",
+      "landmarkId": "qutub-minar",
+      "split": "held-out",
+      "condition": "quwwat_ul_islam_ruins_angle",
+      "expectedCues": ["fluted tapering minaret", "red and buff sandstone casing"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_ind_001",
+      "landmarkId": "india-gate",
+      "split": "held-out",
+      "condition": "kartavya_path_axis",
+      "expectedCues": ["triumphal arch portal", "pale sandstone and granite massing", "shallow domed shallow bowl finial"],
+      "confusableWith": ["gateway-of-india", "arc-de-triomphe"]
+    },
+    {
+      "id": "eval_ind_002",
+      "landmarkId": "india-gate",
+      "split": "tuning",
+      "condition": "inscriptions_parapet_angle",
+      "expectedCues": ["triumphal arch portal", "shallow domed shallow bowl finial"],
+      "confusableWith": ["gateway-of-india"]
+    },
+    {
+      "id": "eval_ind_003",
+      "landmarkId": "india-gate",
+      "split": "held-out",
+      "condition": "canopy_context",
+      "expectedCues": ["triumphal arch portal", "pale sandstone and granite massing"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_haw_001",
+      "landmarkId": "hawa-mahal",
+      "split": "held-out",
+      "condition": "facade_pyramidal_frontal",
+      "expectedCues": ["five-storey pyramidal honeycombed facade", "cascading bay windows", "curved domed canopies", "pink sandstone"],
+      "confusableWith": ["city-palace-jaipur"]
+    },
+    {
+      "id": "eval_haw_002",
+      "landmarkId": "hawa-mahal",
+      "split": "tuning",
+      "condition": "jharokha_lattice_detail",
+      "expectedCues": ["cascading bay windows", "curved domed canopies"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_haw_003",
+      "landmarkId": "hawa-mahal",
+      "split": "held-out",
+      "condition": "street_side_angle",
+      "expectedCues": ["five-storey pyramidal honeycombed facade", "pink sandstone"],
+      "confusableWith": []
+    },
+    {
+      "id": "eval_ooc_001",
+      "landmarkId": null,
+      "split": "held-out",
+      "category": "lookalike",
+      "subject": "Humayun's Tomb, Delhi",
+      "expectedOutcome": "uncertain",
+      "reason": "Red sandstone tomb with white marble dome similar to Mughal style but distinct plinth and double-dome proportions"
+    },
+    {
+      "id": "eval_ooc_002",
+      "landmarkId": null,
+      "split": "held-out",
+      "category": "lookalike",
+      "subject": "Gateway of India, Mumbai",
+      "expectedOutcome": "uncertain",
+      "reason": "Yellow basalt triumphal arch with Indo-Saracenic turrets, confusable with India Gate"
+    },
+    {
+      "id": "eval_ooc_003",
+      "landmarkId": null,
+      "split": "held-out",
+      "category": "lookalike",
+      "subject": "Charminar, Hyderabad",
+      "expectedOutcome": "out_of_catalogue",
+      "reason": "Four-minaret monument with stilted arches, out-of-catalogue"
+    },
+    {
+      "id": "eval_ooc_004",
+      "landmarkId": null,
+      "split": "held-out",
+      "category": "non_landmark",
+      "subject": "Delhi metro station concourse",
+      "expectedOutcome": "out_of_catalogue",
+      "reason": "Modern transit interior with concrete pillars and ticket barriers"
+    },
+    {
+      "id": "eval_ooc_005",
+      "landmarkId": null,
+      "split": "held-out",
+      "category": "non_landmark",
+      "subject": "Indian street food vendor stall",
+      "expectedOutcome": "out_of_catalogue",
+      "reason": "Street marketplace scene without monumental architecture"
+    },
+    {
+      "id": "eval_stress_001",
+      "landmarkId": "taj-mahal",
+      "split": "held-out",
+      "category": "stress_heavy_crop",
+      "expectedCues": ["white marble central dome"],
+      "expectedOutcome": "uncertain"
+    },
+    {
+      "id": "eval_stress_002",
+      "landmarkId": "red-fort",
+      "split": "held-out",
+      "category": "stress_low_light",
+      "expectedCues": ["red sandstone curtain walls"],
+      "expectedOutcome": "uncertain"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "red-fort",
+  "name": "Red Fort",
+  "aliases": ["Lal Qila"],
+  "location": { "city": "Delhi", "state": "Delhi", "country": "India", "lat": 28.6562, "lon": 77.2410 },
+  "period": "1638–1648",
+  "descriptor": "Red sandstone Mughal fortress and palace complex in Old Delhi.",
+  "identifyingCues": [
+    { "id": "red-sandstone-walls", "text": "massive red sandstone curtain walls with turrets" },
+    { "id": "lahori-gate", "text": "large arched entrance gate (Lahori Gate) with bastions" },
+    { "id": "octagonal-towers", "text": "octagonal corner towers along the ramparts" }
+  ],
+  "confusableWith": ["hawa-mahal"],
+  "terrain": { "type": "illustrative", "elevationRange": [213, 220], "footprintRadiusM": 500 },
+  "cards": {
+    "identity": [
+      { "text": "Fortified palace built by Shah Jahan when he moved the Mughal capital from Agra to Delhi.", "evidenceIds": ["ev_red_001"], "provenance": "curated" }
+    ],
+    "visiting": [
+      { "text": "Open daily except Monday, 9:30 AM to 4:30 PM. Sound and light show in the evening.", "evidenceIds": ["ev_red_004"], "provenance": "curated", "asOf": "2026-10-01" }
+    ],
+    "conditions": [
+      { "text": "Flat urban site. Hot summers (May–June above 45 °C) and monsoon rains July–September.", "evidenceIds": ["ev_red_007"], "provenance": "curated" }
+    ],
+    "context": [
+      { "text": "UNESCO World Heritage Site since 2007. The Prime Minister delivers the Independence Day address from its ramparts each 15 August.", "evidenceIds": ["ev_red_002"], "provenance": "curated" }
+    ]
+  }
+}
