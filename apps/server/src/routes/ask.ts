@@ -57,7 +57,11 @@ export async function askRoute(app: FastifyInstance) {
 
     // 3. Enqueue grounded Q&A generation
     const abortController = new AbortController();
-    req.raw.on('close', () => abortController.abort());
+    req.raw.on('close', () => {
+      if (!reply.raw.writableEnded && req.raw.destroyed && !req.raw.complete) {
+        abortController.abort();
+      }
+    });
 
     try {
       const result = await inferenceQueue.enqueue(async (workerSignal) => {

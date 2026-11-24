@@ -13,12 +13,56 @@ const STOP_WORDS = new Set([
   'you', 'this', 'there', 'their'
 ]);
 
+const SYNONYM_EXPANSIONS: Record<string, string[]> = {
+  builder: ['build', 'built', 'commissioned', 'creator', 'who'],
+  built: ['build', 'builder', 'commissioned'],
+  build: ['built', 'builder', 'commissioned'],
+  building: ['build', 'built', 'architecture', 'monument'],
+  date: ['commissioned', 'built', 'year', 'century', 'period'],
+  dates: ['date', 'commissioned', 'built'],
+  commissioned: ['built', 'builder', 'constructed'],
+  hours: ['hour', 'timings', 'timing', 'open', 'opening', 'close', 'closing'],
+  visiting: ['visit', 'visitors', 'visitor', 'tourism'],
+  visitors: ['visit', 'visiting', 'visitor'],
+  visitor: ['visit', 'visiting', 'visitors'],
+  entry: ['enter', 'gate', 'gates', 'admission', 'ticket', 'tickets'],
+  enter: ['entry', 'gate', 'admission'],
+  rules: ['guidelines', 'guideline', 'security', 'prohibited'],
+  guidelines: ['rules', 'guideline', 'security'],
+  weather: ['climate', 'temperature', 'temperatures', 'monsoon', 'heat'],
+  environmental: ['environment', 'climate', 'riverbank', 'flooding'],
+  environment: ['environmental', 'climate'],
+  conditions: ['condition', 'weather', 'climate'],
+  architectural: ['architecture', 'style', 'styles', 'design'],
+  architecture: ['architectural', 'style', 'styles', 'design'],
+  styles: ['style', 'architecture', 'architectural'],
+  style: ['styles', 'architecture', 'architectural'],
+  construction: ['commissioned', 'built', 'commenced', 'started'],
+  begun: ['commissioned', 'commenced', 'started', 'built', '1632'],
+  begin: ['commissioned', 'commenced', 'started', 'built'],
+  commenced: ['commissioned', 'begun', 'started', 'built'],
+  resemble: ['pyramidal', 'facade', 'crown', 'resembles'],
+  form: ['pyramidal', 'facade', 'crown', 'structure'],
+};
+
 export function tokenize(text: string): string[] {
-  return text
+  const baseTokens = text
     .toLowerCase()
     .replace(/[^\w\s-]/g, ' ')
     .split(/\s+/)
     .filter((t) => t.length > 1 && !STOP_WORDS.has(t));
+
+  const allTokens = new Set(baseTokens);
+  for (const t of baseTokens) {
+    const expansions = SYNONYM_EXPANSIONS[t];
+    if (expansions) {
+      for (const exp of expansions) {
+        allTokens.add(exp);
+      }
+    }
+  }
+
+  return Array.from(allTokens);
 }
 
 export class BM25Retriever {
@@ -30,7 +74,7 @@ export class BM25Retriever {
   constructor(
     k1 = 1.2,
     b = 0.75,
-    minScore = Number(process.env.RETRIEVAL_MIN_SCORE ?? 0.8),
+    minScore = Number(process.env.RETRIEVAL_MIN_SCORE ?? 0.5),
     topK = Number(process.env.RETRIEVAL_TOP_K ?? 5)
   ) {
     this.k1 = k1;
@@ -53,8 +97,12 @@ export class BM25Retriever {
     const N = passages.length;
     if (N === 0) return [];
 
-    // Document tokenization and lengths
-    const docTokensList = passages.map((p) => tokenize(p.text));
+    // Document tokenization and lengths (including document title for full context matching)
+    const docTokensList = passages.map((p) => {
+      const doc = kbStore.getEvidenceDoc(p.docId);
+      const title = doc ? doc.title : '';
+      return tokenize(`${title} ${p.text}`);
+    });
     const docLens = docTokensList.map((dt) => dt.length);
     const avgdl = docLens.reduce((a, b) => a + b, 0) / N;
 

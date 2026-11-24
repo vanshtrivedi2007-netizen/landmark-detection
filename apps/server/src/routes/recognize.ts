@@ -58,7 +58,9 @@ export async function recognizeRoute(app: FastifyInstance) {
 
     const abortController = new AbortController();
     req.raw.on('close', () => {
-      abortController.abort();
+      if (!reply.raw.writableEnded && req.raw.destroyed && !req.raw.complete) {
+        abortController.abort();
+      }
     });
 
     const startTime = Date.now();
